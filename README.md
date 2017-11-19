@@ -13,3 +13,6 @@ Exploration of the Go language
 - copy the file `hello.go` from this repo and into `src/hello/`
 - run `go build` and you should see a `hello` executable
 - run the executable with `./hello`
+
+# Running go commands
+- `go run <myfile.go` will run the go file
