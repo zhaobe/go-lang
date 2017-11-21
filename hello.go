@@ -11,9 +11,16 @@ func main() {
   fmt.Println("my int number: ", num)
   fmt.Println("my float number: ", floatNum)
   
-  // randNum is autoset to type int here
+  // randNum is short declared as type int
   autoTypedNum := 24
-  fmt.Println("my automatically data typed num: ", autoTypedNum)
+  fmt.Println("my short variable declaration num is: ", autoTypedNum)
+  
+  // mixed variable declaration using type inference
+  var a, b = 1, "notNum"
+  fmt.Println("a =", a)
+  fmt.Println("b =", b)
+  fmt.Printf("a is of type: %T \n", a)
+  fmt.Printf("b is of type: %T \n\n", b)
   
   // arithmetic operations
   fmt.Println("10 + 5 = ", 10 + 5)
@@ -28,9 +35,9 @@ func main() {
   
   // boolean and precision float
   var isOverTen bool = true
-  fmt.Printf("%.2f \n", floatNum)
+  fmt.Printf("floatNum with precision of 2: %.2f \n", floatNum)
   fmt.Printf("Returning data type for floatNum: %T\n", floatNum)
-  fmt.Printf("Printing a boolean for isOverTen: %t\n", isOverTen)
+  fmt.Printf("Printing a boolean for isOverTen: %t\n\n", isOverTen)
   
   // simple for loop
   fmt.Println("for loops, different syntax")
@@ -52,5 +59,7 @@ func main() {
     case 5: fmt.Println("Your number is higher than 5")
     default: fmt.Println("Your number is 7")
   }
+  
+  
 }
 
