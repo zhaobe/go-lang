@@ -1,15 +1,23 @@
 package main
 
-import "fmt"
+import (
+  "fmt"
+  "math/rand"
+  "time"
+)
 
 func loop(num int) {
-  for i := 0; i < 100; i++ {
-    fmt.Println(num, "", i)
+  for i := 0; i < 15; i++ {
+    fmt.Println(num, "\t", i)
+    randNum := time.Duration(rand.Intn(500))
+    time.Sleep(time.Millisecond * randNum)
   }
 }
 
 func main() {
-  go loop(0)
+  for i := 0; i < 15; i++ {
+    go loop(i)
+  }
   var userInput string
   fmt.Scanln(&userInput)
 }
