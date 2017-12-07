@@ -2,16 +2,24 @@ package main
 
 import (
   "fmt"
-  "crypto/rand"
-  "encoding/base64"
+  "math/rand"
+  "time"
 )
 
-func randBytes(n int) ([]byte) {
-  b := make([]byte, n)
-  return b
+const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+func randStr(n int) string {
+    b := make([]byte, n)
+    for i := range b {
+        b[i] = letters[rand.Intn(len(letters))]
+    }
+    return string(b)
 }
 
-
 func main() {
-  fmt.Println(randBytes)
+  rand.Seed(time.Now().UTC().UnixNano())
+  for i := 0; i < 15; i++ {
+    fmt.Println("t1: ", randStr(8), "\tt2: ", randStr(8))
+  }
+  
 }
