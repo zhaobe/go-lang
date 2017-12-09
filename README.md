@@ -15,4 +15,5 @@ Exploration of the Go language
 - run the executable with `./hello`
 
 # Running go commands
-- `go run <myfile.go` will run the go file
+- `go run <myfile.go>` will run the go file
+- `gofmt -w <file.go>` will format code
