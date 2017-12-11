@@ -6,7 +6,8 @@ import (
 	"time"
 )
 
-const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+// const letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+const letters = "abc"
 
 func randStr(n int) string {
 	b := make([]byte, n)
@@ -28,11 +29,15 @@ func compStr(a, b string) int {
 
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
-	for i := 0; i < 15; i++ {
-		a := randStr(8)
-		b := randStr(8)
-		fmt.Println("a: ", a, "\tb: ", b)
-		fmt.Println("compare: ", compStr(a, b))
-	}
-
+	a := randStr(3)
+	var b string
+	
+	for {
+			b := randStr(3)
+			fmt.Println("a: ", a, "\tb: ", b)
+			fmt.Println("compare: ", compStr(a, b))
+			if a == b {
+				break
+			}
+		}
 }
