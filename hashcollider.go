@@ -28,12 +28,11 @@ func compStr(a, b string) int {
 	return +1
 }
 
-func main() {
-	rand.Seed(time.Now().UTC().UnixNano())
+func compare() {
 	a := randStr(8)
-
 	// while loop until match
 	for {
+
 		b := randStr(8)
 
 		if a == b {
@@ -41,4 +40,12 @@ func main() {
 			break
 		}
 	}
+}
+
+func main() {
+	rand.Seed(time.Now().UTC().UnixNano())
+	
+	compare()
+	compare()
+	
 }
