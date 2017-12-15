@@ -29,6 +29,8 @@ func compStr(a, b string) int {
 }
 
 func compare() {
+	start := time.Now()
+
 	a := randStr(8)
 	// while loop until match
 	for {
@@ -40,11 +42,13 @@ func compare() {
 			break
 		}
 	}
+	elapsed := time.Since(start)
+    fmt.Printf("compare function took %s\n\n", elapsed)
 }
 
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
-	
+
 	compare()
 	compare()
 	
