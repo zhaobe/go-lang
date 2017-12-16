@@ -18,16 +18,6 @@ func randStr(n int) string {
 	return string(b)
 }
 
-func compStr(a, b string) int {
-	if a == b {
-		return 0
-	}
-	if a < b {
-		return -1
-	}
-	return +1
-}
-
 func compare() {
 	start := time.Now()
 
@@ -49,7 +39,9 @@ func compare() {
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
 
-	compare()
-	compare()
+	go compare()
+	go compare()
+	time.Sleep(250 * time.Millisecond)
+	fmt.Println("main done...")
 	
 }
