@@ -39,8 +39,14 @@ func compare() {
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
 
-	go compare()
-	go compare()
+	var userInput string
+	fmt.Scanln(&userInput)
+	if (userInput == go compare()) {
+		fmt.Println("a match was found")
+	}
+
+	// go compare()
+	// go compare()
 	time.Sleep(250 * time.Millisecond)
 	fmt.Println("main done...")
 	
