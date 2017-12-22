@@ -7,8 +7,10 @@ import (
 	"time"
 )
 
-func main() {
-	const interval = 10000
+const interval = 10000
+
+func monte_carlo() {
+	
 	var circle_pt float64 = 0
 	var sq_pt float64 = 0
 	var dist, pi float64
@@ -35,4 +37,8 @@ func main() {
 
 	}
 	fmt.Printf("Final estimate of pi: %e\n", pi)
+}
+
+func main() {
+	monte_carlo()
 }
