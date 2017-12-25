@@ -14,6 +14,19 @@ func memoize() {
 	}
 }
 
+// tabulation, bottom up approach
+func fib_tab(n int) int {
+	var base = n + 1
+	tab := make([]int, base)
+	
+	tab[0] = 0
+	tab[1] = 1
+	for i := 2; i <= n; i++ {
+		tab[i] = tab[i - 1] + tab[i - 2]
+	}
+	return tab[n]
+}
+
 func fib(n int) int {
 	if (table[n] == NIL) {
 		if (n <= 1) {
@@ -32,5 +45,6 @@ func main() {
 	memoize()
 	fmt.Println("Enter a number between 0 and 100: ")
 	fmt.Scanln(&input)
-	fmt.Printf("The Fibonacci number is: %d\n", fib(input))
+	fmt.Printf("The memoization Fibonacci number is: %d\n", fib(input))
+	fmt.Printf("The tabulation Fibonacci number is: %d\n", fib_tab(input))
 }
