@@ -17,3 +17,6 @@ Exploration of the Go language
 # Running go commands
 - `go run <myfile.go>` will run the go file
 - `gofmt -w <file.go>` will format code
+
+# concurrency
+# cryptofun
