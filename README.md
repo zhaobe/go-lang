@@ -18,5 +18,10 @@ Exploration of the Go language
 - `go run <myfile.go>` will run the go file
 - `gofmt -w <file.go>` will format code
 
-# concurrency
-# cryptofun
+## concurrency - simple concurrency with a go routine
+## cryptofun - todo
+## fibonacci - simple memoization and tabulation using fibonacci
+## function - random generate two numbers and determine larger number
+## hashcollider - testing hash comparison and hash searching
+## pi_montecarlo - montecarlo solver to determine value of pi
+## swap - swapping without temp variable
