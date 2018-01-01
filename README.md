@@ -18,6 +18,7 @@ Exploration of the Go language
 - `go run <myfile.go>` will run the go file
 - `gofmt -w <file.go>` will format code
 
+# Files
 - concurrency - simple concurrency with a go routine
 - cryptofun - todo
 - fibonacci - simple memoization and tabulation using fibonacci
