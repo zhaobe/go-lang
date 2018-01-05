@@ -15,22 +15,23 @@ func main() {
 		sum += lineTwo[i]
 	}
 	mean := sum/lineOne
-	fmt.Println(mean)
+	fmt.Println("Mean:\t", mean)
 
-	if(lineOne % 2 == 0) {
+	if(len(lineTwo) % 2 == 0) {
 		midOne := (len(lineTwo) / 2) - 1
 		midTwo := len(lineTwo) / 2
 		
 		sort.Ints(lineTwo)
-		// fmt.Println(lineTwo)
-		medianSum := lineTwo(midOne) + lineTwo(midTwo)
-		median := medianSum / 2
-		fmt.Println(  median)
-		
+		median := (lineTwo[midOne] + lineTwo[midTwo]) / 2
+		fmt.Println("Median:\t", median)
 		fmt.Println("even")
 	} else {
-		fmt.Println("odd")
+		midPoint := (len(lineTwo) / 2) + 1
+		median := lineTwo[midPoint]
+		fmt.Println("Median:\t", median)
 	}
+
+	
 
 
 }
