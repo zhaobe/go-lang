@@ -5,18 +5,16 @@ import (
 	"sort"
 )
 
-func main() {
-
-	lineOne := 10
-	lineTwo := []int{64630, 11735, 14216, 99233, 14470, 4978, 73429, 38120, 51135, 67060}
-
+func mean(lineOne int, lineTwo []int) {
 	var sum int
 	for i := 0; i < lineOne; i++ {
 		sum += lineTwo[i]
 	}
 	mean := sum/lineOne
 	fmt.Println("Mean:\t", mean)
+}
 
+func median(lineOne int, lineTwo []int) {
 	if(len(lineTwo) % 2 == 0) {
 		midOne := (len(lineTwo) / 2) - 1
 		midTwo := len(lineTwo) / 2
@@ -30,8 +28,12 @@ func main() {
 		median := lineTwo[midPoint]
 		fmt.Println("Median:\t", median)
 	}
+}
 
-	
+func main() {
 
-
+	lineOne := 10
+	lineTwo := []int{64630, 11735, 14216, 99233, 14470, 4978, 73429, 38120, 51135, 67060}
+	mean(lineOne, lineTwo)
+	median(lineOne, lineTwo)
 }
