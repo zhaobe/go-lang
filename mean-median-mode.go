@@ -31,14 +31,22 @@ func median(lineOne int, lineTwo []int) {
 }
 
 func mode(lineOne int, lineTwo []int) {
-	x := make(map[int]int)
+	mode := 0
+	maxCount := 0
 
 	for i := 0; i < lineOne; i++ {
-		var count int = 0
-		x[i] = lineTwo[i] // store key
-		x[lineTwo[i]] = count + 1 // count key	
-		fmt.Println("key: ", x[i], "\tvalue: \t", x[lineTwo[i]])
+		count := 0
+		for j := 0; j < lineOne; j++ {
+			if lineTwo[j] == lineTwo[i] {
+				count++
+			}
+		}
+		if count > maxCount {
+			maxCount = count
+			mode = lineTwo[i]
+		}
 	}
+	fmt.Println("Mode:\t", mode)
 
 }
 
